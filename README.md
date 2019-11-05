@@ -12,7 +12,7 @@
 - Vagrant
     - VirtualBox Guest Additions install
 ```
-vagrant plugin install vagrant-vbguest
+    - vagrant plugin install vagrant-vbguest
 ```
 - Packer
 3.  
