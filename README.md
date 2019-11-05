@@ -4,9 +4,9 @@
 ### Задание
 
 - Установить необходимое ПО
- - Git
- - Vagrant
- - Packer
+	- Git
+	- Vagrant
+	- Packer
 - Обновить ядро
 
 
