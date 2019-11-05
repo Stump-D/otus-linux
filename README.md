@@ -1,8 +1,13 @@
-# Инструкции
+# **С чего начинается Linux**
+## Домашнее задание №1
 
-* [Как начать Git](git_quick_start.md)
-* [Как начать Vagrant](vagrant_quick_start.md)
+### Задание
 
-## otus-linux
+- Установить необходимое ПО
+ - Git
+ - Vagrant
+ - Packer
+- Обновить ядро
 
-Используйте этот [Vagrantfile](Vagrantfile) - для тестового стенда.
+
+
