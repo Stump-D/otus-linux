@@ -10,10 +10,10 @@
 2. На стенде установлено дополнительное ПО:
 - Git
 - Vagrant
-```alias
+    - VirtualBox Guest Additions install
 ...
 vagrant plugin install vagrant-vbguest
 ...
-```
+
 - Packer
 3.  
