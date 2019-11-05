@@ -12,40 +12,29 @@
 - Vagrant
 
 ```Bash
-...
 wget https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
 yum install vagrant_2.2.6_x86_64.rpm
-...
 ```
-
     - VirtualBox Guest Additions install:
 ```Bash
-...
 vagrant plugin install vagrant-vbguest
-...
 ```
 - Packer
 ```Bash
-...
 curl https://releases.hashicorp.com/packer/1.4.4/packer_1.4.4_linux_amd64.zip | \
 sudo gzip -d > /usr/local/bin/packer && \
 sudo chmod +x /usr/local/bin/packer
-...
 ```
 3. Сконфигурирован и запущен с помощью Vagrant экземпляр виртуальной машины.
 4. Обновлено ядро и произведены настройки загрузчика в запущенной виртуальной машине:
 ```Bash
-...
 sudo yum install -y http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 sudo yum --enablerepo elrepo-kernel install kernel-ml -y
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 sudo grub2-set-default 0
-...
 ```
 
 5. С помощью установленной утилиты packer создан свой образ системы, с уже установленым ядром 5й версии.
 ```Bash
-...
 packer build centos.json
-...
 ```
