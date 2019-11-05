@@ -15,12 +15,15 @@
     vagrant plugin install vagrant-vbguest
 ```
 - Packer
-3. Сконфигурирован и запущен с помощью Vagrant экземпляр виптуальной машины.
-4. Обновлено ядро и произведены настройки grub в запущенной виртуальной машине:
-```
+3. Сконфигурирован и запущен с помощью Vagrant экземпляр виртуальной машины.
+4. Обновлено ядро и произведены настройки загрузчика в запущенной виртуальной машине:
+
 sudo yum install -y http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 sudo yum --enablerepo elrepo-kernel install kernel-ml -y
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 sudo grub2-set-default 0
+
+5. С помощью установленной утилиты packer создан свой образ системы, с уже установленым ядром 5й версии.
 ```
-5.
+packer build centos.json
+```
