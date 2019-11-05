@@ -8,19 +8,18 @@
 
 1. Подготовлен и развернут стенд на платформе Centos 7.
 2. На стенде установлено необходимое ПО:
-    - Git
-    - Vagrant
-
+- Git
+- Vagrant
 ```Bash
 wget https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
 yum install vagrant_2.2.6_x86_64.rpm
 ```
-	- VirtualBox Guest Additions install:
 
+- VirtualBox Guest Additions install:
 ```Bash
 vagrant plugin install vagrant-vbguest
 ```
-    - Packer
+- Packer
 
 ```Bash
 curl https://releases.hashicorp.com/packer/1.4.4/packer_1.4.4_linux_amd64.zip | \
@@ -41,3 +40,4 @@ sudo grub2-set-default 0
 ```Bash
 packer build centos.json
 ```
+
