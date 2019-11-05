@@ -10,5 +10,10 @@
 2. На стенде установлено дополнительное ПО:
 - Git
 - Vagrant
+```alias
+...
+vagrant plugin install vagrant-vbguest
+...
+```
 - Packer
 3.  
