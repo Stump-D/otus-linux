@@ -40,7 +40,7 @@ sudo grub2-set-default 0
 packer build centos.json
 ```
 
-6. Импорт созданного образа в vagrant:
+6. Импорт созданного образа в Vagrant:
 ```Bash
 vagrant box add --name centos-7-5 centos-7.7.1908-kernel-5-x86_64-Minimal.box
 ```

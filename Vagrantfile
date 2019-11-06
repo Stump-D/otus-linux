@@ -5,6 +5,10 @@ MACHINES = {
   :otuslinux => {
         :box_name => "centos-7-5",
         :ip_addr => '192.168.11.101',
+        # VM CPU count
+	:cpus => 2,
+        # VM RAM size (Mb)
+        :memory => 1024,
 	:disks => {
 		:sata1 => {
 			:dfile => './sata1.vdi',
