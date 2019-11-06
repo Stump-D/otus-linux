@@ -9,7 +9,7 @@
 1. Подготовлен и развернут стенд на платформе Centos 7.
 2. На стенде установлено необходимое ПО:
 - Git
-- Vagrant
+- Vagrant 
 ```Bash
 wget https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
 yum install vagrant_2.2.6_x86_64.rpm
@@ -18,6 +18,8 @@ yum install vagrant_2.2.6_x86_64.rpm
 ```Bash
 vagrant plugin install vagrant-vbguest
 ```
+- VirtualBox: <https://www.tecmint.com/install-virtualbox-on-redhat-centos-fedora>
+
 - Packer
 
 ```Bash
