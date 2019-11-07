@@ -13,9 +13,6 @@
 ```Bash
 wget https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
 yum install vagrant_2.2.6_x86_64.rpm
-```
-- VirtualBox Guest Additions install
-```Bash
 vagrant plugin install vagrant-vbguest
 ```
 - VirtualBox: <https://www.tecmint.com/install-virtualbox-on-redhat-centos-fedora>
@@ -53,6 +50,6 @@ uname -r
 
 7.  Произведена выгрузка созданного образа  в Vagrant Cloud: <https://app.vagrantup.com/Stump-D/boxes/centos-7-5>
 ```Bash
-vagrant cloud publish --release <Stump-D>/centos-7-5 1.0 virtualbox \ 
+vagrant cloud publish --release Stump-D/centos-7-5 1.0 virtualbox / 
 centos-7.7.1908-kernel-5-x86_64-Minimal.bo
 ```

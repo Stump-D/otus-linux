@@ -3,7 +3,8 @@
 
 MACHINES = {
   :otuslinux => {
-        :box_name => "centos-7-5",
+        :box_name => "Stump-D/centos-7-5",
+        
         :ip_addr => '192.168.11.101',
         # VM CPU count
 	:cpus => 2,
