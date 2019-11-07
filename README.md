@@ -37,12 +37,22 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 sudo grub2-set-default 0
 ```
 
-5. С помощью установленной утилиты packer создан свой образ системы, с уже установленым ядром 5й версии.
+5. С помощью установленной утилиты packer создан свой образ системы, с уже скомпилированным и установленным 
+ядром 5й версии, а также установлены VBoxLinuxAdditions (произведена настройка скриптов <https://github.com/Stump-D/manual_kernel_update/tree/master/packer/scripts>).
 ```Bash
 packer build centos.json
 ```
 
-6. Импорт созданного образа в Vagrant:
+6. Выполнен импорт созданного образа в Vagrant и проверка результатов сборки:
 ```Bash
 vagrant box add --name centos-7-5 centos-7.7.1908-kernel-5-x86_64-Minimal.box
+vargant up
+vagrant ssh
+uname -r
+```
+
+7.  Произведена выгрузка созданного образа  в Vagrant Cloud: <https://app.vagrantup.com/Stump-D/boxes/centos-7-5>
+```Bash
+vagrant cloud publish --release <Stump-D>/centos-7-5 1.0 virtualbox \ 
+centos-7.7.1908-kernel-5-x86_64-Minimal.bo
 ```
